@@ -22,11 +22,11 @@ create table linktable(sikey int not null,sskey int not null,foreign key(sikey) 
 # trigger
 DELIMITER $$
   CREATE TRIGGER after_insert_item_table
-    AFTER INSERT ON item
+    AFTER insert ON item
     FOR EACH ROW
   BEGIN
-    DECLARE SSID INT;
-    SELECT SSKEY INTO SSID FROM SELLERINFO WHERE SELLERID=NEW.SELLERID;
-    INSERT INTO LINKTABLE values(new.sikey,ssid);
+    DECLARE ssid INT;
+    SELECT sskey INTO ssid FROM sellerinfo where sellerid=new.sellerid;
+    INSERT INTO linktable values(new.sikey,ssid);
   END$$
   DELIMITER ;
