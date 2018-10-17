@@ -5,6 +5,7 @@ REST API built using Jersey for Advertisement Portal Website
 
 # dataQueries 
 create database advertisementProject;
+
 use advertisementProject;
 
 
