@@ -1,7 +1,9 @@
 # RESTful-service-usingJersey
 REST API built using Jersey for Advertisement Portal Website
 
-
+# note
+1) database names are case sensitive in linux while case insensitive in windows
+2) same for table names
 
 # dataQueries 
 # database
